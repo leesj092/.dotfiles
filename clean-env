@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+# I hope there shall never come a day to use this...
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    echo "Removing $folder"
+    stow -D $folder
+done
+popd
