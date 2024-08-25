@@ -9,36 +9,6 @@ fi
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-# ------------------------------------ MY STUFF ------------------------------------------
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH="$PATH:/opt/homebrew/lib/ruby/gems/3.3.0/bin"
-export PATH="$PATH:/Users/danchu/Desktop/SJ Lee/Development/flutter/bin"
-export PATH="$PATH:/Users/danchu/.local/"
-export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
-
-# Scripts:
-export PATH="$HOME/.local/scripts:$PATH"
-bindkey -s ^f "tmux-sessionizer\n"
-
-# Some variables
-export DOTFILES="$HOME/.dotfiles"
-export STOW_FOLDERS="bin,nvim,tmux,zsh"
-export BAT_THEME="Coldark-Dark"
-
-# Aliases
-eval $(thefuck --alias)
-alias cat='bat'
-
-# The greatest flutter run command
-function flutter-watch(){
-tmux send-keys "flutter run $1 $2 $3 $4 --pid-file=/tmp/tf1.pid" Enter \;\
-    split-window -v \;\
-    send-keys 'npx -y nodemon -e dart -x "cat /tmp/tf1.pid | xargs kill -s USR1"' Enter \;\
-    resize-pane -y 5 -t 1 \;\
-    select-pane -t 0 \;
-    }
-# ------------- NOTHING I CREATED IS DOWN THERE. TRUST ME I'VE CHECKED TWICE -------------
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -138,6 +108,37 @@ source <(fzf --zsh)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# ------------------------------------ MY STUFF ------------------------------------------
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="$PATH:/opt/homebrew/lib/ruby/gems/3.3.0/bin"
+export PATH="$PATH:/Users/danchu/Desktop/SJ Lee/Development/flutter/bin"
+export PATH="$PATH:/Users/danchu/.local/"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+
+# Scripts:
+export PATH="$HOME/.local/scripts:$PATH"
+bindkey -s ^f "tmux-sessionizer\n"
+
+# Some variables
+export DOTFILES="$HOME/.dotfiles"
+export STOW_FOLDERS="bin,nvim,tmux,zsh"
+export BAT_THEME="Coldark-Dark"
+
+# Aliases
+eval $(thefuck --alias)
+alias cat="bat"
+alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+
+# The greatest flutter run command
+function flutter-watch(){
+tmux send-keys "flutter run $1 $2 $3 $4 --pid-file=/tmp/tf1.pid" Enter \;\
+    split-window -v \;\
+    send-keys 'npx -y nodemon -e dart -x "cat /tmp/tf1.pid | xargs kill -s USR1"' Enter \;\
+    resize-pane -y 5 -t 1 \;\
+    select-pane -t 0 \;
+    }
+# --------------------------------- END OF MY STUFF --------------------------------------
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
