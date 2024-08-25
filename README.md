@@ -14,6 +14,7 @@ Here is an idea tho
 3. Oh my zsh
 4. Powerlevel10k
 5. Fzf
-6. Tmux
-7. Tpm
-8. Tmux catppuccin
+6. bat
+7. Tmux
+8. Tpm
+9. Tmux catppuccin
