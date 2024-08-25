@@ -24,6 +24,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 # Some variables
 export DOTFILES="$HOME/.dotfiles"
 export STOW_FOLDERS="bin,nvim,tmux,zsh"
+export BAT_THEME="Coldark-Dark"
 
 # Aliases
 eval $(thefuck --alias)
