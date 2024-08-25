@@ -24,7 +24,10 @@ bindkey -s ^f "tmux-sessionizer\n"
 # Some variables
 export DOTFILES="$HOME/.dotfiles"
 export STOW_FOLDERS="bin,nvim,tmux,zsh"
+
+# Aliases
 eval $(thefuck --alias)
+alias cat='bat'
 
 # The greatest flutter run command
 function flutter-watch(){
