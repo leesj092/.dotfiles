@@ -14,9 +14,10 @@ Here is an idea tho
 3. Oh my zsh
 4. Powerlevel10k
 5. Fzf
-6. bat
-7. eza
-8. git-delta
-9. Tmux
-10. Tpm
-11. Tmux catppuccin
+6. Maybe checkout fzf-git?
+7. bat
+8. eza
+9. git-delta
+10. Tmux
+11. Tpm
+12. Tmux catppuccin
