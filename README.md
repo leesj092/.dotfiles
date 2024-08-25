@@ -15,6 +15,8 @@ Here is an idea tho
 4. Powerlevel10k
 5. Fzf
 6. bat
-7. Tmux
-8. Tpm
-9. Tmux catppuccin
+7. eza
+8. git-delta
+9. Tmux
+10. Tpm
+11. Tmux catppuccin

@@ -122,7 +122,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # Some variables
 export DOTFILES="$HOME/.dotfiles"
-export STOW_FOLDERS="bin,nvim,tmux,zsh"
+export STOW_FOLDERS="bin,git,nvim,tmux,zsh"
 export BAT_THEME="Coldark-Dark"
 
 # Aliases
