@@ -1,7 +1,7 @@
 local quotesByChad = {
   '🗡️ Why do I always see these things after they\'re done and gone...? 🗡️',
   '🗡️ Whether it suits them or not, people yearn for a dream 🗡️',
-  '🐉 Push through the pain. Giving up hurts more. 🐉',
+  '🐉🔮 Push through the pain. Giving up hurts more. 🔮🐉',
   '🔥 Its the duty of those born strong to help who may be less fortunate 🔥',
   '⛫  It\'s not dying that frightens us. It\'s living without ever having done our best. ⛫',
   '🪽 It\'s us who gives meaning to our comrades\'s lives. 🪽',
@@ -9,6 +9,7 @@ local quotesByChad = {
   '👾 The weaker you are, the faster you get thrown away 👾',
   '🪽 If you win, you live. If you lose, you die. If you don\'t fight, you can\'t win 🪽',
   '🍃 Those who do not understand true pain can never understand true peace 🍃',
+  '🧿 Are you the strongest because you are _ _ _, or are you _ _ _ because you are the strongest..? 🧿',
 }
 
 
