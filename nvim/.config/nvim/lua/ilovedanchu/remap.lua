@@ -1,4 +1,12 @@
 vim.g.mapleader = " "
+vim.keymap.set("n", "j", "gj")
+vim.keymap.set("n", "k", "gk")
+
+vim.keymap.set("n", "H", "g0")
+vim.keymap.set("n", "L", "g$")
+vim.keymap.set("n", "I", "g0i")
+vim.keymap.set("n", "A", "g$a")
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 vim.keymap.set("n", "<left>", "<nop>")
