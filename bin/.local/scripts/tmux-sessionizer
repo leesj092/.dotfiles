@@ -15,6 +15,48 @@ tmux_running=$(pgrep tmux)
 
 echo "tmux_running: $tmux_running, TMUX: $TMUX"
 
+# BEFORE friendzone
+#if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+#    tmux new-session -A -s "$selected_name" -c "$selected"
+#    exit 0
+#fi
+#
+#if ! tmux has-session -t="$selected_name" 2> /dev/null; then
+#    tmux new-session -ds "$selected_name" -c "$selected"
+#fi
+#
+#if [[ -n $TMUX ]]; then
+#    tmux switch-client -t "$selected_name"
+#else
+#    tmux attach-session -t "$selected_name"
+#fi
+
+# AFTER friendzone
+if [[ "$selected" == "/Users/danchu/Projects/friendzone" ]]; then
+  if ! tmux has-session -t="$selected_name" 2> /dev/null; then
+      # Create the main session with the first window for nvim
+      tmux new-session -d -s "$selected_name" -n "nvim" -c "$selected"
+      tmux send-keys -t "$selected_name" 'nvim .' C-m
+
+      # Add second window for flutter-watch
+      tmux new-window -t "$selected_name" -n "flutter-watch" -c "$selected"
+      # If you have specific commands for flutter-watch, use send-keys here
+
+      # Add third window for backend
+      tmux new-window -t "$selected_name" -n "backend" -c "$selected"
+      tmux send-keys -t "$selected_name:backend" 'cd backend' C-m
+      tmux send-keys -t "$selected_name:backend" 'firebase emulators:start --import=./emulator-data' C-m
+  fi
+
+  if [[ -n $TMUX ]]; then
+      tmux switch-client -t "$selected_name"
+  else
+      tmux attach-session -t "$selected_name"
+  fi
+  exit 0
+fi
+
+
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -A -s "$selected_name" -c "$selected"
     exit 0
