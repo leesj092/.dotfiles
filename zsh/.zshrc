@@ -14,7 +14,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,7 +80,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source <(fzf --zsh)
+#source <(fzf --zsh)
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -114,6 +115,7 @@ export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="$PATH:/opt/homebrew/lib/ruby/gems/3.3.0/bin"
 export PATH="$PATH:/Users/danchu/Desktop/SJ Lee/Development/flutter/bin"
 export PATH="$PATH:/Users/danchu/.local/"
+export PATH="$HOME/.local/share/nvim/lazy/mason.nvim/lua/mason-core/managers/luarocks:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
 
 # Scripts:
@@ -122,7 +124,7 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # Some variables
 export DOTFILES="$HOME/.dotfiles"
-export STOW_FOLDERS="bin,git,nvim,tmux,zsh"
+export STOW_FOLDERS="alacritty,bin,git,nvim,tmux,zsh"
 export BAT_THEME="Coldark-Dark"
 
 # Aliases

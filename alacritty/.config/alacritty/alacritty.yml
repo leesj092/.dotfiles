@@ -1,0 +1,24 @@
+import:
+  - "~/.config/alacritty/catppuccin-mocha.yml"
+
+env:
+  TERM: "xterm-256color"
+
+font:
+  size: 12.0
+
+  bold:
+    family: "JetBrainsMono Nerd Font"
+    style: "Bold"
+
+  bold_italic:
+    family: "JetBrainsMono Nerd Font"
+    style: "Bold Italic"
+
+  italic:
+    family: "JetBrainsMono Nerd Font"
+    style: "Italic"
+
+  normal:
+    family: "JetBrainsMono Nerd Font"
+    style: "Regular"
