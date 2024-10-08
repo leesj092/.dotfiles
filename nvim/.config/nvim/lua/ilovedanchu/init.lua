@@ -39,7 +39,7 @@ autocmd({ "BufWritePre" }, {
   group = ilovedanchuGroup,
   pattern = "*",
   callback = function()
-    vim.lsp.buf.format({ async = false })
+    vim.cmd("silent! lua vim.lsp.buf.format({ async = false })")
   end,
 })
 

@@ -1,6 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "j", "gj")
-vim.keymap.set("n", "k", "gk")
 
 vim.keymap.set("n", "H", "g0")
 vim.keymap.set("n", "L", "g$")
@@ -26,7 +24,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<cr>")
 
 -- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>p", [["_d"+P]])
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
