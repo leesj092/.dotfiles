@@ -124,13 +124,14 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # Some variables
 export DOTFILES="$HOME/.dotfiles"
-export STOW_FOLDERS="alacritty,bin,git,nvim,tmux,zsh"
+export STOW_FOLDERS="bin,git,nvim,tmux,zsh"
 export BAT_THEME="Coldark-Dark"
 
 # Aliases
 eval $(thefuck --alias)
 alias cat="bat"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias mkdir='mkdir -p'
 
 # The greatest flutter run command
 function flutter-watch(){
