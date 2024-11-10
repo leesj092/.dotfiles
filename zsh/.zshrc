@@ -132,6 +132,7 @@ eval $(thefuck --alias)
 alias cat="bat"
 alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 alias mkdir='mkdir -p'
+alias python='python3'
 
 # The greatest flutter run command
 function flutter-watch(){
