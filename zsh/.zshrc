@@ -112,6 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # ------------------------------------ MY STUFF ------------------------------------------
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/bin/gh:$PATH"
 export PATH="$PATH:/opt/homebrew/lib/ruby/gems/3.3.0/bin"
 export PATH="$PATH:/Users/danchu/Desktop/SJ Lee/Development/flutter/bin"
 export PATH="$PATH:/Users/danchu/.local/"

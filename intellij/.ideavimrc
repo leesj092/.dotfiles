@@ -1,0 +1,123 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+
+" Do incremental searching.
+"set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+"map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+"Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+"Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+"From nvim
+------------------------------------------------------------
+" Leader key
+let mapleader = " "
+
+" General remaps
+nmap H g0
+nmap L g$
+nmap I g0i
+nmap A g$a
+
+" Prevent arrow keys in normal mode
+nmap <Left> <Nop>
+nmap <Right> <Nop>
+nmap <Up> <Nop>
+nmap <Down> <Nop>
+
+" Movement and centering
+nmap J mzJ`z
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+nmap n nzzzv
+nmap N Nzzzv
+
+" Clear search highlights
+nmap <Esc> :nohlsearch<CR>
+
+" Disable Q in normal mode
+nmap Q <Nop>
+
+" Yank to system clipboard
+nmap <Leader>y "+y
+vmap <Leader>y "+y
+nmap <Leader>Y "+Y
+
+" Delete without affecting registers
+nmap <Leader>d "_d
+vmap <Leader>d "_d
+
+" Move lines in visual mode
+vmap J :m '>+1<CR>gv=gv
+vmap K :m '<-2<CR>gv=gv
+
+" Format substitution
+nmap <Leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
+" Quickfix and location list navigation
+nmap <Leader>qd :cnext<CR>zz
+nmap <Leader>qu :cprev<CR>zz
+nmap <Leader>k :lnext<CR>zz
+nmap <Leader>j :lprev<CR>zz
+
+" File explorer
+nmap <Leader>pv :Ex<CR>
+
+" Tab and indentation settings
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" Line numbers
+set number
+set relativenumber
+
+" Search behavior
+set hlsearch
+set incsearch
+
+" Display options
+set termguicolors
+set scrolloff=10
+set signcolumn=auto
+
+" Performance
+set updatetime=50
+
+" Disable mouse support
+set mouse=
+
+" Disable swap and backup files
+set noswapfile
+set nobackup
+
+" Persistent undo
+" Note: IdeaVim does not support undodir configuration.
+" You'll need to rely on IntelliJ's file undo system.
+set undofile
